@@ -1,29 +1,18 @@
-import './App.css';
+import "./App.css";
+import "./styles/global.css";
+import "./styles/theme.css";
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div>
+      <h1> meu primeiro projeto<h1>
+
+      <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. At quaerat commodi, vitae atque, numquam repellat porro ad et repellendus eius quos 
+      doloremque excepturi, ratione ipsa! Nihil est consequatur dolorem itaque! </p>
+        
+         
     </div>
   );
 }
-
-export default App;
