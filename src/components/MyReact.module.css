@@ -1,0 +1,66 @@
+.container {
+  display: grid;
+  grid-template-areas: "header1 header1" "aside header2" "aside main" "footer footer";
+
+  grid-template-areas:
+    "header1 header1"
+    "main"
+    "footer footer"
+    "aside1"
+    "aside2";
+
+  grid-template-columns: 30rem auto;
+  grid-template-rows: 10rem 5rem calc(100vh - 15rem) 10rem;
+
+  @media (min-width: 1200px) {
+    react-template-areas:
+      "header1"
+      "header2"
+      "main"
+      "footer";
+
+    react-template-columns: 1fr;
+  }
+}
+
+.header1 {
+  grid-area: header1;
+  background-color: darkslateblue;
+}
+
+.header2 {
+  grid-area: header2;
+  background-color: deeppink;
+
+    @media (min-width: 1200px) {
+        display: none;
+    }
+}
+
+.aside {
+  grid-area: aside;
+  background-color: darkseagreen;
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+
+.footer {
+  grid-area: footer;
+  background-color: darkslategray;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+ @media (min-width: 1200px) {
+    react-template-areas:
+      "header1"
+      "header2"
+      "main"
+      "footer";
+
+    react-template-columns: 1fr;
+  }
+}
