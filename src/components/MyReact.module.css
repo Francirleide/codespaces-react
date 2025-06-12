@@ -106,7 +106,6 @@
   text-align: center;
 }
 
-/* RESPONSIVIDADE */
 
 /* < 1200px: esconde a lateral direita */
 @media (max-width: 1199px) {
