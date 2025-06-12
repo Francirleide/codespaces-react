@@ -1,14 +1,11 @@
-import "./styles/theme.css";
-import "./styles/global.css";
-// import { MyTextList } from "./components/MyTextList";
-import { MyGrid } from "./components/MyGrid";
+import { MyReact } from "./components/MyReact";
 
-export default function App() {
-
+function App() {
   return (
-    // React Fragment
     <>
-      <MyGrid />
+      <MyReact />
     </>
   );
 }
+
+export default App;
