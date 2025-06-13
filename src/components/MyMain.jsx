@@ -1,29 +1,26 @@
 import styles from './MyMain.module.css';
 
-export function MyMain() {
+export function Main() {
+  const cards = [
+    { id: 0, title: "My Text 0" },
+    { id: 1, title: "My Text 1" },
+    { id: 2, title: "My Text 2" },
+    { id: 3, title: "My Text 3" },
+    { id: 4, title: "My Text 4" },
+  ];
+
   return (
-    <main className={styles.main}>
-      <div className={styles.grid}>
-        <div className={styles.card}>
-          <h2>Card 1</h2>
-          <p>Este é o primeiro card.</p>
+    <main className="main">
+      {cards.map(card => (
+        <div key={card.id} className="card">
+          <img src={`https://picsum.photos/300?random=${card.id}`} alt="" />
+          <h2>{card.title}</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eligendi 
+            quisquam mollitia minus dolores quae aperiam nobis.
+          </p>
         </div>
-        <div className={styles.card}>
-          <h2>Card 2</h2>
-          <p>Este é o segundo card.</p>
-        </div>
-            <div className={styles.card}>
-              <h2>Card 3</h2>
-              <p>Este é o terceiro card.</p>
-            </div>
-            <div className={styles.card}>
-              <h2>Card 4</h2>
-              <p>Este é o quarto card.</p>
-            </div>
-            <div className={styles.card}>
-              <h2>Card 5</h2>
-              <p>Este é o quinto card.</p>
-            </div>
-          </div>
-        </main>
+      ))}
+    </main>
+  );
 }

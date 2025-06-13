@@ -1,19 +1,14 @@
-import { MyReact } from "./components/MyReact";
-import { MyHeader } from "./components/MyHeader";
-import { MyFooter } from "./components/MyFooter";
-import { Mymain } from "./components/Mymain";
-import { Fingerprint } from "./components/Fingerprint";
+import { Header } from "./components/Header";
+import { MyMain } from "./components/MyMain";
+import { Footer } from "./components/MyFooter";
 
-function App() {
+export function App() {
   return (
-    <>
-      <MyReact />
-      <MyHeader />
-      <MyFooter />
-      <Mymain />
-      <Fingerprint />
-    </>
+    <div>
+      <Header />
+      <MyMain />
+      <Footer />
+    </div>
   );
 }
 
-export default App;
