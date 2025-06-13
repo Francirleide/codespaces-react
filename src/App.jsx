@@ -1,14 +1,15 @@
-import { Header } from "./components/Header";
+import { MyHeader } from "./components/MyHeader";
 import { MyMain } from "./components/MyMain";
-import { Footer } from "./components/MyFooter";
+import { MyFooter } from "./components/MyFooter";
+import "./App.css";
+
 
 export function App() {
   return (
-    <div>
-      <Header />
+    <div className="app">
+      <MyHeader />
       <MyMain />
-      <Footer />
+      <MyFooter />
     </div>
   );
 }
-

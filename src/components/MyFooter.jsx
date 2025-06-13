@@ -1,26 +1,17 @@
-import styles from "./Footer.module.css";
+import { Instagram, MessageCircle, Github } from "lucide-react";
 
-export function Main() {
-  const cards = [
-    { id: 0, title: "My Text 0" },
-    { id: 1, title: "My Text 1" },
-    { id: 2, title: "My Text 2" },
-    { id: 3, title: "My Text 3" },
-    { id: 4, title: "My Text 4" },
-  ];
-
+export function MyFooter() {
   return (
-    <main className="main">
-      {cards.map(card => (
-        <div key={card.id} className="card">
-          <img src={`https://picsum.photos/300?random=${card.id}`} alt="" />
-          <h2>{card.title}</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eligendi 
-            quisquam mollitia minus dolores quae aperiam nobis.
-          </p>
-        </div>
-      ))}
-    </main>
+    <footer className="footer">
+      <div className="info">
+        <p>IFRN - Campus Macau<br />Curso Técnico em Informática<br />Programação para Internet 2025</p>
+        <p className="author">Francirleide Trajano Da Silva</p>
+      </div>
+      <div className="icons">
+        <Github />
+        <Instagram />
+        <MessageCircle />
+      </div>
+    </footer>
   );
 }
