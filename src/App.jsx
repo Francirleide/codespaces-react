@@ -8,8 +8,7 @@ export function App() {
   return (
     <div className="app">
       <MyHeader />
-      <MyMain />
-      <MyFooter />
+      <LuckyNumber />
     </div>
   );
 }
