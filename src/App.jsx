@@ -5,7 +5,7 @@ import { LuckyNumber } from "./components/LuckyNumber";
 export default function App() {
   return (
     <>
-      <LuckyNumber />
+      <ProductList/>
     </>
   );
 }
