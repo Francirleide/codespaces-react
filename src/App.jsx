@@ -1,9 +1,10 @@
 import "./styles/theme.css";
 import "./styles/global.css";
-import { MyHeader } from "./components/MyHeader";  
 import { ProductList } from "./components/ProductList";
+import { MyHeader } from "./components/MyHeader";
 import { useState } from "react";
-
+import { Cart } from "./components/Cart";
+import { Route, Routes } from "react-router";
 
 export default function App() {
   const [cart, setCart] = useState([]);
@@ -16,7 +17,11 @@ export default function App() {
     // React Fragment
     <>
       <Header cart={cart} />
-      <ProductList addToCart={addToCart} />
+      <Routes>
+        <Route path="/" element={<ProductList addToCart={addToCart} />} />
+        <Route path="/cart" element={<Cart cart={cart} />} />
+        {/* Add more routes as needed */}
+      </Routes>
     </>
-  );
+  )
 }

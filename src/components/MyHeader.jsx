@@ -1,5 +1,5 @@
-import { Link } from "react-router";
-import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
+import styles from "./MyHeader.module.css";
 import { ShoppingBasket } from "lucide-react";
 
 export function MyHeader({ cart }) {

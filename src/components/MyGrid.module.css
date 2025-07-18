@@ -57,3 +57,14 @@
   /* align-content: center; */
 }
 
+.card {
+  background-color: var(--primary-dark);
+  border-radius: 1rem;
+  color: var(--primary-contrast-light);
+  padding: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  font-size: 3rem;
+  text-align: center;
+  height: 20rem;
+}
+
