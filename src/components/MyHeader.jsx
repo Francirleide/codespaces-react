@@ -1,11 +1,17 @@
-export function MyHeader() {
+import { Link } from "react-router";
+import styles from "./Header.module.css";
+import { ShoppingBasket } from "lucide-react";
+
+export function MyHeader({ cart }) {
   return (
-    <header className="header">
-      <div className="logo">
-        <img src="https://picsum.photos/50" alt="logo" />
-        <img src="https://picsum.photos/50" alt="logo" />
+    <header className={styles.header}>
+      <Link to="/"><h1>TRJ Megastore</h1></Link>
+      <div>
+        <Link to="/cart"><ShoppingBasket size={24} /></Link>
+        <p>
+          Total $: {cart.reduce((total, product) => total + product.price, 0).toFixed(2)}
+        </p>
       </div>
-      <h1>Foco, Força, Fé</h1>
     </header>
   );
 }
