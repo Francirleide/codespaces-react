@@ -3,10 +3,11 @@ import "./styles/global.css";
 import { ProductList } from "./components/ProductList";
 import { Header } from "./components/Header";
 import { useState } from "react";
-import { Cart } from "./components/Cart";
+import { Cart } from "./components/KabumCart";
 import { Route, Routes } from "react-router";
 
 export default function App() {
+
   const [cart, setCart] = useState([]);
 
   function addToCart(product) {
