@@ -1,7 +1,7 @@
 import "./styles/theme.css";
 import "./styles/global.css";
 import { ProductList } from "./components/ProductList";
-import { MyHeader } from "./components/MyHeader";
+import { Header } from "./components/Header";
 import { useState } from "react";
 import { Cart } from "./components/Cart";
 import { Route, Routes } from "react-router";
@@ -23,5 +23,5 @@ export default function App() {
         {/* Add more routes as needed */}
       </Routes>
     </>
-  )
+  );
 }
