@@ -4,8 +4,8 @@ import { CircularProgress } from "@mui/material";
 import { Product } from "./Product";
 
 export function ProductList({ addToCart }) {
-  var category = "smartphones";
-  var limit = 10;
+  var category = "beauty";
+  var limit = 12;
   var apiUrl = `https://dummyjson.com/products/category/${category}?limit=${limit}&select=id,thumbnail,title,price,description`;
 
   const [products, setProducts] = useState([]);
@@ -24,12 +24,13 @@ export function ProductList({ addToCart }) {
         setLoading(false);
       }
     }
-    fetchProducts();
+    setTimeout(() => {
+      fetchProducts();
+    }, 100);
   }, []);
-
   return (
     <div className={styles.container}>
-      <div className={styles.productList}>
+      <div className={styles.grid}>
         {products.map((product) => (
           <Product key={product.id} product={product} addToCart={addToCart} />
         ))}
@@ -37,14 +38,17 @@ export function ProductList({ addToCart }) {
       {loading && (
         <div>
           <CircularProgress
+            // size="sm"
             thickness={5}
             style={{ margin: "2rem auto", display: "block" }}
-            sx={{ color: "#001111" }}
+            sx={{
+              color: "#001111",
+            }}
           />
           <p>Loading products...</p>
         </div>
       )}
-      {error && <p>Error loading products: {error.message} ❌</p>}
+      {error && <p>Error loading products: {error.message}</p>}
     </div>
   );
 }
