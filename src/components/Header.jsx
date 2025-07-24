@@ -1,17 +1,20 @@
-import { Link } from "react-router";
-import styles from "./Header.module.css";
 import { ShoppingBasket } from "lucide-react";
+import styles from "./Header.module.css";
+import { Link } from "react-router";
 
 export function Header({ cart }) {
+  const total = cart.reduce((sum, product) => sum + product.price, 0);
+
   return (
-    <header className={styles.header}>
-      <Link to="/"><h1>TRJ Megastore</h1></Link>
-      <div>
-        <Link to="/cart"><ShoppingBasket size={24} /></Link>
-        <p>
-          Total $: {cart.reduce((total, product) => total + product.price, 0).toFixed(2)}
-        </p>
-      </div>
+    <header className={styles.container}>
+      <Link to="/" className={styles.logo}>
+        <h1>TJA Megastore</h1>
+      </Link>
+
+      <Link to="/cart" className={styles.cartInfo}>
+        <ShoppingBasket size={28} />
+        <p>Total: R$ {total.toFixed(2)}</p>
+      </Link>
     </header>
   );
 }
