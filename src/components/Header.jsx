@@ -8,7 +8,7 @@ export function Header({ cart }) {
   return (
     <header className={styles.container}>
       <Link to="/" className={styles.logo}>
-        <h1>TJA Megastore</h1>
+        <h1>TRJ Megastore</h1>
       </Link>
 
       <Link to="/cart" className={styles.cartInfo}>
