@@ -13,5 +13,7 @@ export function Product({ product, addToCart }) {
       <p className={styles.productPrice}>${product.price}</p>
       <button onClick={() => addToCart(product)} className={styles.productButton}>ADD TO CART</button>
     </div>
+
+
   );
 }
