@@ -53,4 +53,14 @@
     font-size: 1.2rem;
     padding: 0.8rem 1.2rem;
   }
+  
+  .loginButton {
+  font-size: 6rem;      
+  font-weight: bold;      
+  color: #911c4b;         
+  text-decoration: none;  
+  cursor: pointer;        
+
+}
+
 }
