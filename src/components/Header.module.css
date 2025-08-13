@@ -1,4 +1,4 @@
-.container {
+ .container { 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,13 +54,20 @@
     padding: 0.8rem 1.2rem;
   }
   
-  .loginButton {
-  font-size: 6rem;      
-  font-weight: bold;      
-  color: #911c4b;         
-  text-decoration: none;  
-  cursor: pointer;        
-
+.loginButton {
+  font-size: 3rem; 
+  padding: 10px 16px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.loginButton:hover {
+  background-color: #eee;
+}
+
 
 }

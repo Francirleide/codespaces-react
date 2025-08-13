@@ -1,7 +1,6 @@
 import { ShoppingBasket } from "lucide-react";
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom"; // corrigido aqui
-
+import { Link } from "react-router-dom"; 
 export function Header({ cart }) {
   const total = cart.reduce((sum, product) => sum + product.price, 0);
   const itemCount = cart.length;
@@ -12,9 +11,15 @@ export function Header({ cart }) {
         <h1>TRJ Megastore</h1>
       </Link>
 
+      
+     
       <nav style={{ display: "flex", gap: "20px", alignItems: "center" }}>
         <Link to="/login" className={styles.loginButton}>
           Login
+        </Link>
+        
+        <Link to="/products" className={styles.loginButton}>
+        Gerenciar Produtos
         </Link>
 
         <Link to="/cart" className={styles.cartInfo} style={{ position: "relative" }}>

@@ -1,42 +1,20 @@
-import { useState } from "react";
-import styles from "./Login.module.css"; 
+import styles from "./Login.module.css";
+import { Link } from "react-router";
 
+export function Login() {
+    return (
+        <div className={styles.LoginContainer}>
+            <h1>Página de Login</h1>
+            <form className={styles.loginForm}>
+                <label htmlFor="email">E-Mail:</label>
+                <input type="text" id="email" name="email" required className={styles.input} />
 
-export function Login({ onLogin }) {
-  const [email, setEmail] = useState("");
-  const [senha, setSenha] = useState("");
+                <label htmlFor="password">Senha:</label>
+                <input type="password" id="password" name="password" required className={styles.input} />
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("E-mail:", email);
-    console.log("Senha:", senha);
-
-   
-    if (onLogin) {
-      onLogin(email);
-    }
-  };
-
-  return (
-    <div className={styles.container}>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="E-mail"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Senha"
-          value={senha}
-          onChange={(e) => setSenha(e.target.value)}
-          required
-        />
-        <button type="submit">Entrar</button>
-      </form>
-    </div>
-  );
+                <button type="submit" className={styles.button}>Login</button>
+            </form>
+            <Link to="/signup" className={styles.signup}>Não tem uma conta?</Link>
+        </div>
+    );
 }
