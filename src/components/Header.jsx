@@ -1,6 +1,7 @@
 import { ShoppingBasket } from "lucide-react";
 import styles from "./Header.module.css";
 import { Link } from "react-router-dom"; 
+
 export function Header({ cart }) {
   const total = cart.reduce((sum, product) => sum + product.price, 0);
   const itemCount = cart.length;
