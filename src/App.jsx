@@ -3,7 +3,7 @@ import "./styles/global.css";
 import { ProductList } from "./components/ProductList";
 import { Header } from "./components/Header";
 import { useState } from "react";
-import { Route, Routes } from "react-router-dom"; 
+import { Route, Routes } from "react-router-dom";
 import { Cart } from "./components/Cart";
 import { Login } from "./components/Login";
 import { Signup } from "./components/Signup";
